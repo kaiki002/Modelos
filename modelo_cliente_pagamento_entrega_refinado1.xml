@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Modelo Cliente-Pagamento-Entrega" id="baseDiagram">
+    <mxGraphModel dx="1420" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Entidade Cliente PF -->
+        <mxCell id="cliente_pf" value="Cliente PF&#xa;---------------&#xa;id_cliente&#xa;nome&#xa;CPF" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Entidade Cliente PJ -->
+        <mxCell id="cliente_pj" value="Cliente PJ&#xa;---------------&#xa;id_cliente&#xa;razao_social&#xa;CNPJ" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="40" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Entidade Pedido -->
+        <mxCell id="pedido" value="Pedido&#xa;---------------&#xa;id_pedido&#xa;data&#xa;valor_total" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="180" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Entidade Pagamento PIX -->
+        <mxCell id="pagamento_pix" value="Pagamento PIX&#xa;---------------&#xa;id_pagamento&#xa;chave_pix" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Entidade Pagamento Cartão -->
+        <mxCell id="pagamento_cartao" value="Pagamento Cartão&#xa;---------------&#xa;id_pagamento&#xa;numero_cartao&#xa;validade" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="260" y="320" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Entidade Pagamento Boleto -->
+        <mxCell id="pagamento_boleto" value="Pagamento Boleto&#xa;---------------&#xa;id_pagamento&#xa;linha_digitavel" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="320" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Entidade Entrega -->
+        <mxCell id="entrega" value="Entrega&#xa;---------------&#xa;id_entrega&#xa;status&#xa;codigo_rastreio" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="460" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Relacionamentos Clientes com Pedido -->
+        <mxCell id="rel_pf_pedido" value="1:N" style="endArrow=block;endFill=1;strokeColor=#000000;fontSize=12;" edge="1" parent="1" source="cliente_pf" target="pedido">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rel_pj_pedido" value="1:N" style="endArrow=block;endFill=1;strokeColor=#000000;fontSize=12;" edge="1" parent="1" source="cliente_pj" target="pedido">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Relacionamentos Pedido com Pagamentos -->
+        <mxCell id="rel_pedido_pix" value="1:1" style="endArrow=block;endFill=1;strokeColor=#000000;fontSize=12;" edge="1" parent="1" source="pedido" target="pagamento_pix">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rel_pedido_cartao" value="1:1" style="endArrow=block;endFill=1;strokeColor=#000000;fontSize=12;" edge="1" parent="1" source="pedido" target="pagamento_cartao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rel_pedido_boleto" value="1:1" style="endArrow=block;endFill=1;strokeColor=#000000;fontSize=12;" edge="1" parent="1" source="pedido" target="pagamento_boleto">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Relacionamento Pedido com Entrega -->
+        <mxCell id="rel_pedido_entrega" value="1:1" style="endArrow=block;endFill=1;strokeColor=#000000;fontSize=12;" edge="1" parent="1" source="pedido" target="entrega">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
