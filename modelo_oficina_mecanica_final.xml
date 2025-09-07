@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="oficina1" name="Oficina Mecânica">
+    <mxGraphModel dx="1280" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Cliente -->
+        <mxCell id="cliente" value="Cliente" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Veículo -->
+        <mxCell id="veiculo" value="Veículo" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Ordem de Serviço -->
+        <mxCell id="os" value="Ordem de Serviço\n- Nº OS\n- Data Emissão\n- Valor\n- Status\n- Data Conclusão" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="160" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Mecânico -->
+        <mxCell id="mecanico" value="Mecânico\n- Código\n- Especialidade" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="180" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Dados Pessoais Mecânico -->
+        <mxCell id="dados_mecanico" value="Dados Pessoais Mecânico\n- Nome\n- Endereço" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#4a86e8;" vertex="1" parent="1">
+          <mxGeometry x="500" y="180" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Equipe -->
+        <mxCell id="equipe" value="Equipe\n- Avalia e executa serviços" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="300" y="60" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Serviço -->
+        <mxCell id="servico" value="Serviço\n- Código\n- Descrição\n- Valor" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="320" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Peça -->
+        <mxCell id="peca" value="Peça" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="500" y="320" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Ligações -->
+        <mxCell id="rel1" edge="1" parent="1" source="cliente" target="veiculo" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="veiculo" target="os" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="os" target="mecanico" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="mecanico" target="dados_mecanico" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="mecanico" target="equipe" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="os" target="servico" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="os" target="peca" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
